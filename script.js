@@ -7,8 +7,17 @@ const calculate = () => {
     buttons.forEach((button) => {
         button.addEventListener('click', (e) => {
            let value = e.target.dataset.num;
-           console.log(e.target.dataset);
+           screen.value += value;
         });
     });
-}
+
+    equal.addEventListener("click", () => {
+        let answer =eval(screen.value);
+        screen.value = answer;
+    });
+
+    clear.addEventListener("click", () => {
+        screen.value ="";
+    });
+};
 calculate();
