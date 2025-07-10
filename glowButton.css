@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #161a1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glowing-btn{
+    width: 45rem;
+    height: 12rem;
+    background:none;
+    border: 0.7rem solid rgb(201, 24, 74);
+    border-radius: 2rem;
+    color: rgb(201, 24, 74);
+    font-size: 7rem;
+    letter-spacing: 2.5rem;
+    box-shadow: inset 0 0 3rem rgb(201, 24, 74);
+    padding-left: 2.5rem;
+    cursor: pointer;
+    position: relative;
+}
+@keyframes
+
+.glowing-btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(201, 24, 74, 0.1);
+    box-shadow: inset 0 0 6rem rgb(201, 24, 74);
+}
+
+.glowing-btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    background-color: rgba(201, 24, 74, 0.1);
+    box-shadow: inset 0 0 6rem rgb(201, 24, 74);
+    transform: translate(-50%, 130%) rotateX(45deg) scale(1, 0.35);
+    filter: blur(3rem);
+    pointer-events: none;
+     
+}
+
+.glowing-text{
+   text-shadow: 0 0 1rem rgba(201, 24, 74, 0.7), 
+                0 0 1rem rgba(201, 24, 74, 0.7);
+}
